@@ -1,0 +1,53 @@
+BEGIN MAINPROGRAM
+  theArray = []
+  continue = True
+  WHILE contine:
+    choice = Input "Do you want to: (L)oad numbers, (P)rint the array, (S)um the array, find the ma(X) of the array, find the mi(N) of the array or (Q)uit
+	CASEWHERE choice is
+	  L: LoadArray
+	  P: PrintArray
+	  S: SumArray
+	  X: MaxArray
+	  N: MinArray
+	  Q: continue = False
+	ENDCASE
+  END WHILE
+END MAINPROGRAM
+
+BEGIN LoadArray
+  Let i = 1
+  Read DataValue
+  WHILE DataValue <> "xxx"
+    Let Element (i) = DataValue
+	i = i + 1
+	Read DataValue
+  ENDWHILE
+  Let NumElements = i
+  Display "There are" NumElements "items loaded into the array"
+END LoadArray
+
+BEGIN PrintArrayContents
+  let i = 1
+  REPEAT
+    Display Element(i)
+	i = i + 1
+  UNTIL i >= NumElements
+END printArray
+
+BEGIN SumArrayContents
+  Let i = 1
+  Let total = 0
+  REPEAT
+    Let total = Element (i) + total
+    i = i + 1
+  UNTIL i > NumElements
+  Display "The sum of all the elements in the array = " total
+END SumArrayContents
+
+BEGIN MaxArray
+  Display "This array was called."
+END MaxArray
+
+BEGIN MinArray
+  Display "This array was called."
+END MinArray
