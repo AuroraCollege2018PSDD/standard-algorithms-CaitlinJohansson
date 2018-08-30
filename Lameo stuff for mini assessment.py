@@ -3,7 +3,8 @@ cont = True
 def loadArray(thisArray):
         theArray.append(numbs)
         print(theArray)
-        #append an array python
+        numElements = len(thisArray)
+        print('There are {} elements loaded into the array'.format(numElements))
         
 def printArray(thisArray):
     outString = ""
