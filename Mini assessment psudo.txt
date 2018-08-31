@@ -1,53 +1,54 @@
-BEGIN MAINPROGRAM
-  theArray = []
-  continue = True
-  WHILE contine:
-    choice = Input "Do you want to: (L)oad numbers, (P)rint the array, (S)um the array, find the ma(X) of the array, find the mi(N) of the array or (Q)uit
-	CASEWHERE choice is
-	  L: LoadArray
-	  P: PrintArray
-	  S: SumArray
-	  X: MaxArray
-	  N: MinArray
-	  Q: continue = False
-	ENDCASE
-  END WHILE
-END MAINPROGRAM
-
-BEGIN LoadArray
-  Let i = 1
-  Read DataValue
-  WHILE DataValue <> "xxx"
-    Let Element (i) = DataValue
-	i = i + 1
-	Read DataValue
-  ENDWHILE
-  Let NumElements = i
-  Display "There are" NumElements "items loaded into the array"
-END LoadArray
-
-BEGIN PrintArrayContents
-  let i = 1
-  REPEAT
-    Display Element(i)
-	i = i + 1
-  UNTIL i >= NumElements
-END printArray
-
-BEGIN SumArrayContents
-  Let i = 1
-  Let total = 0
-  REPEAT
-    Let total = Element (i) + total
-    i = i + 1
-  UNTIL i > NumElements
-  Display "The sum of all the elements in the array = " total
-END SumArrayContents
-
-BEGIN MaxArray
-  Display "This array was called."
-END MaxArray
-
-BEGIN MinArray
-  Display "This array was called."
-END MinArray
+1BEGIN MAINPROGRAM
+2  theArray = []
+3  continue = True
+4  WHILE contine:
+5    choice = Input "Do you want to: (L)oad numbers, (P)rint the array, (S)um the array, find the ma(X) of the array, find the mi(N) of the array or (Q)uit
+6	CASEWHERE choice is
+7	  L: LoadArray
+8	  P: PrintArray
+9	  S: SumArray
+10	  X: MaxArray
+11	  N: MinArray
+12	  Q: continue = False
+13	ENDCASE
+14  END WHILE
+15END MAINPROGRAM
+16
+17BEGIN LoadArray
+18  Let i = 1
+19  Read DataValue
+20  WHILE DataValue <> "xxx"
+21    Let Element (i) = DataValue
+22	i = i + 1
+23	Read DataValue
+24  ENDWHILE
+25  Let NumElements = i
+26  Display "There are" NumElements "items loaded into the array"
+27END LoadArray
+28
+29BEGIN PrintArrayContents
+30  let i = 1
+31  REPEAT
+32    Display Element(i)
+33	i = i + 1
+34  UNTIL i >= NumElements
+35END printArray
+36
+37BEGIN SumArrayContents
+38  Let i = 1
+39  Let total = 0
+40  REPEAT
+41    Let total = Element (i) + total
+42    i = i + 1
+43  UNTIL i > NumElements
+44  Display "The sum of all the elements in the array = " total
+45END SumArrayContents
+46
+47BEGIN MaxArray
+48  Display "This array was called."
+49END MaxArray
+50
+51BEGIN MinArray
+52  Display "This array was called."
+53END MinArray
+54
